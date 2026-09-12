@@ -55,3 +55,43 @@ h1 { color:var(--mint); font-size:clamp(38px,5vw,60px); letter-spacing:-.08em; }
 .summary-actions { display:flex; gap:10px; align-items:center; }.summary-actions button { white-space:nowrap; }.download-button { color:#06241f; background:var(--mint); border-radius:4px; font-weight:800; box-shadow:4px 4px 0 #287f70; }.download-button span { display:inline-block; margin-right:5px; font-size:18px; line-height:12px; }.download-button:hover:not(:disabled) { background:#b2f4df; }
 @media (max-width:900px) { .identity-card { grid-template-columns:62px 1fr; }.identity-facts { grid-column:2; }.summary-actions { margin-top:18px; }.summary-actions button { width:100%; } }
 @media (max-width:520px) { .identity-card { grid-template-columns:54px 1fr; padding:15px; gap:12px; }.identity-stamp { width:52px; height:52px; }.identity-copy h2 { font-size:19px; }.identity-copy p { font-size:11px; }.identity-facts { display:grid; gap:8px; }.identity-facts dd { font-size:13px; }.summary-actions { display:grid; } }
+
+/* Mobile pass: keep the specimen chamber and survey card inside the viewport. */
+body { overflow-x:hidden; }
+.workspace { grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr); }
+.question-card, .simulation-card { min-width:0; }
+.scene-wrap canvas { max-width:100%; height:auto; }
+@media (max-width:900px) {
+  .shell { width:min(calc(100% - 24px), 620px); }
+  .workspace { display:grid; grid-template-columns:minmax(0, 1fr); gap:14px; }
+  .simulation-card { order:1; }
+  .question-card { order:2; }
+  .question-card, .simulation-card { width:auto; }
+  .summary { display:block; }
+  .summary > div:first-child { margin-right:0; }
+  .summary-counts { display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin:18px 0; }
+  .summary-actions { display:grid; grid-template-columns:1fr; gap:10px; margin-top:18px; }
+  .summary-actions button { width:100%; }
+}
+@media (max-width:600px) {
+  .shell { width:calc(100% - 20px); padding-top:18px; }
+  .brand-lockup { gap:10px; }
+  .brand-copy { min-width:0; }
+  .brand-mark { flex-basis:72px; width:72px; height:58px; }
+  .brand-mark svg { width:68px; height:52px; }
+  h1 { font-size:42px; }
+  .tagline { font-size:12px; }
+  .subtitle { font-size:13px; line-height:1.35; }
+  .notice { padding:11px 12px; font-size:11px; }
+  .progress-row { padding:12px 4px 13px; }
+  .simulation-card { padding:12px; }
+  .simulation-head h3 { font-size:22px; }
+  .scene-wrap { margin-top:13px; }
+  .scene-labels { padding-inline:9px; }
+  .question-card { padding:20px; }
+  h2 { font-size:27px; }
+  #question { font-size:16px; }
+  .stimulus-note { align-items:flex-start; }
+  .stimulus-note small, .stimulus-note em { line-height:1.35; }
+  .identity-card { margin-bottom:14px; }
+}

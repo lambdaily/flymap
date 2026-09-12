@@ -181,7 +181,7 @@ async function downloadReport() {
 }
 
 async function init() {
-  try { const [indicatorResponse, profileResponse] = await Promise.all([getJSON("/api/indicators"), getJSON("/api/profile")]); state.indicators = indicatorResponse.indicators; renderProfile(profileResponse.profile); renderIndicator(); $("backend-status").textContent = "Motor listo"; } catch (error) { $("backend-status").textContent = "Servidor desconectado"; }
+  try { const [indicatorResponse, profileResponse] = await Promise.all([getJSON("/api/indicators"), getJSON("/api/profile")]); state.indicators = indicatorResponse.indicators; renderProfile(profileResponse.profile); renderIndicator(); } catch (error) { document.body.dataset.connection = "offline"; }
   $("run-button").addEventListener("click", simulateCurrent);
   $("next-button").addEventListener("click", () => { if (state.index < state.indicators.length - 1) { state.index += 1; renderIndicator(); } });
   $("run-all-button").addEventListener("click", runAll);
