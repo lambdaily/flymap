@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FlyMap — A Poverty Stoplight through the mind of a fly</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-label="Isologotipo de FlyMap">
+            <svg viewBox="0 0 120 76" role="img" aria-labelledby="logo-title logo-description">
+              <title id="logo-title">FlyMap</title>
+              <desc id="logo-description">Un semáforo junto a una mosca</desc>
+              <path d="M17 9h25c3 0 5 2 5 5v51c0 2-2 4-5 4H17c-3 0-5-2-5-4V14c0-3 2-5 5-5Z" fill="#0d766d"/>
+              <path d="M24 69v5m11-5v5" stroke="#0d766d" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="29.5" cy="22" r="6" fill="#e45e51"/>
+              <circle cx="29.5" cy="37" r="6" fill="#e5a51c"/>
+              <circle cx="29.5" cy="52" r="6" fill="#72c58d"/>
+              <g transform="translate(3 0)" stroke="#192322" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="76" cy="18" rx="17" ry="8" transform="rotate(-48 76 18)" fill="#b8e8e0" stroke-width="2"/>
+                <ellipse cx="94" cy="28" rx="21" ry="9" transform="rotate(18 94 28)" fill="#9fdad6" stroke-width="2"/>
+                <ellipse cx="83" cy="44" rx="21" ry="13" transform="rotate(10 83 44)" fill="#263b37" stroke-width="2"/>
+                <circle cx="62" cy="35" r="12" fill="#263b37" stroke-width="2"/>
+                <circle cx="59" cy="33" r="5.4" fill="#f5fffa" stroke="none"/>
+                <circle cx="60" cy="34" r="2.5" fill="#192322" stroke="none"/>
+                <circle cx="68" cy="33" r="5.4" fill="#f5fffa" stroke="none"/>
+                <circle cx="69" cy="34" r="2.5" fill="#192322" stroke="none"/>
+                <path d="M73 37 83 41" fill="none" stroke-width="2"/>
+                <path d="M75 42 99 49m-22-8 22-12m-34 16-8 9m16-6-6 11m22-12 7 8" fill="none" stroke-width="2.1"/>
+              </g>
+            </svg>
+          </div>
+          <div class="brand-copy">
+            <p class="eyebrow">EXPERIMENTO DE INTELIGENCIA Y BIENESTAR</p>
+            <h1>FlyMap</h1>
+            <p class="tagline"><em>A Poverty Stoplight through the mind of a fly.</em></p>
+            <p class="subtitle">Una mosca digital explora un mundo simulado y convierte su conducta en una señal de semáforo.</p>
+          </div>
+        </div>
+        <div class="status-pill"><i></i><span id="backend-status">Motor listo</span></div>
+      </header>
+
+      <section class="notice">
+        <strong>Demo interpretativa</strong>
+        <span>El color representa una lectura de conducta simulada; no es una respuesta humana ni un diagnóstico oficial de pobreza.</span>
+      </section>
+
+      <section class="identity-card card" aria-label="Identidad generada de la mosca">
+        <div class="identity-stamp"><span>FLYMAP</span><b id="fly-code">FM-----</b></div>
+        <div class="identity-copy">
+          <span class="eyebrow">IDENTIDAD DE LA MOSCA</span>
+          <h2 id="fly-name">Generando nombre...</h2>
+          <p>Un espécimen digital con una historia simulada para esta sesión.</p>
+        </div>
+        <dl class="identity-facts">
+          <div><dt>País generado</dt><dd id="fly-country">---</dd></div>
+          <div><dt>Lugar de nacimiento</dt><dd id="fly-birthplace">Moscú</dd></div>
+        </dl>
+      </section>
+
+      <section class="progress-row">
+        <div>
+          <span class="eyebrow">ATLAS DE RESPUESTAS</span>
+          <div class="progress-title"><strong id="progress-label">Indicador 1 de 6</strong><span id="progress-percent">17%</span></div>
+        </div>
+        <div class="progress-track"><div id="progress-bar"></div></div>
+      </section>
+
+      <section class="workspace">
+        <article class="card question-card">
+          <div class="card-kicker"><span id="dimension">DIMENSIÓN</span><span id="indicator-id">#01</span></div>
+          <h2 id="indicator-title">Cargando indicador…</h2>
+          <p id="question">Cargando pregunta…</p>
+          <p class="helper" id="description"></p>
+          <div class="stimulus-note"><span class="stimulus-icon">✦</span><div><span class="eyebrow">ESTÍMULO QUE LA MOSCA PUEDE INTERPRETAR</span><strong id="stimulus-title">Preparando estímulo…</strong><small id="stimulus-description"></small><em id="stimulus-rule"></em></div></div>
+          <div class="legend">
+            <div><span class="dot red"></span><div><b>Rojo</b><small>Carencia crítica</small></div></div>
+            <div><span class="dot yellow"></span><div><b>Amarillo</b><small>Situación inestable</small></div></div>
+            <div><span class="dot green"></span><div><b>Verde</b><small>Situación favorable</small></div></div>
+          </div>
+          <div class="actions">
+            <button class="primary" id="run-button">Observar respuesta de la mosca <span>→</span></button>
+            <button class="secondary" id="next-button" disabled>Siguiente indicador</button>
+          </div>
+        </article>
+
+        <article class="card simulation-card">
+          <div class="simulation-head"><div><span class="eyebrow">CÁMARA DE PERCEPCIÓN</span><h3>Lo que experimenta</h3></div><span class="live-dot">● RITMO LENTO</span></div>
+          <div class="scene-wrap"><canvas id="scene" width="720" height="330" aria-label="Entorno simulado de la mosca"></canvas><div class="scene-labels"><span>no se acerca</span><span>duda</span><span>va decidida</span></div></div>
+          <div class="readout-title"><span>PULSO NEURAL</span><span id="step-label">En espera</span></div>
+          <div class="bars" id="bars"></div>
+          <div class="result-box pending" id="result-box"><div class="result-icon">◌</div><div><span class="eyebrow">RESPUESTA</span><strong id="result-label">La mosca aún no ha respondido</strong><small id="result-detail">Ejecuta la observación para iniciar la simulación.</small></div></div>
+        </article>
+      </section>
+
+      <section class="summary card">
+        <div><span class="eyebrow">SEÑALES CAPTURADAS</span><h3>Lecturas acumuladas</h3></div>
+        <div class="summary-counts"><div><b id="count-green">0</b><span>verdes</span></div><div><b id="count-yellow">0</b><span>amarillos</span></div><div><b id="count-red">0</b><span>rojos</span></div></div>
+        <div class="summary-actions">
+          <button class="secondary" id="run-all-button">Correr todos los estímulos</button>
+          <button class="download-button" id="download-button" title="Descargar el FlyMap de esta mosca en PDF"><span>↓</span> Descargar FlyMap PDF</button>
+        </div>
+      </section>
+
+      <footer>FlyMap · backend <code>surrogate-lif</code> · preparado para un adaptador FlyWire/Eon</footer>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

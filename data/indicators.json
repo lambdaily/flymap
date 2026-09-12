@@ -1,0 +1,68 @@
+[
+  {
+    "id": "food",
+    "dimension": "Comida · fruta madura",
+    "title": "Banana madura",
+    "question": "¿La mosca detecta y alcanza la banana madura?",
+    "description": "El olor dulce y la superficie amarilla representan una fruta madura, una señal visual y olfativa familiar.",
+    "quality": 0.78,
+    "signals": {"food": 0.78, "shelter": 0.45, "danger": 0.08, "social": 0.25, "novelty": 0.42, "water": 0.35, "reward": 0.76},
+    "stimulus": {"icon": "banana", "title": "Banana madura", "description": "Fruta blanda con olor dulce y alta señal de alimento.", "targetChannel": "food", "targetPosition": 0.80, "responseRule": "Verde si va decidida; amarillo si se aproxima con duda; rojo si no va."},
+    "colorMeaning": {"red": "Carencia crítica", "yellow": "Acceso inestable", "green": "Acceso suficiente"}
+  },
+  {
+    "id": "housing",
+    "dimension": "Comida · azúcar",
+    "title": "Gota de azúcar",
+    "question": "¿La mosca detecta y alcanza la gota de azúcar?",
+    "description": "Una gota brillante y dulce activa la búsqueda de energía y la conducta de alimentación.",
+    "quality": 0.90,
+    "signals": {"food": 0.94, "shelter": 0.42, "danger": 0.05, "social": 0.30, "novelty": 0.28, "water": 0.58, "reward": 0.92},
+    "stimulus": {"icon": "sugar", "title": "Gota de azúcar", "description": "Una gota de sacarosa concentra una señal gustativa y energética.", "targetChannel": "food", "targetPosition": 0.80, "responseRule": "Verde si va decidida; amarillo si se aproxima con duda; rojo si no va."},
+    "colorMeaning": {"red": "Sin protección suficiente", "yellow": "Protección parcial", "green": "Protección adecuada"}
+  },
+  {
+    "id": "health",
+    "dimension": "Comida · fruta fresca",
+    "title": "Naranja fresca",
+    "question": "¿La mosca detecta y alcanza la naranja fresca?",
+    "description": "El aroma cítrico y la pulpa jugosa representan una fruta fresca, pero menos familiar que la banana.",
+    "quality": 0.56,
+    "signals": {"food": 0.58, "shelter": 0.55, "danger": 0.18, "social": 0.42, "novelty": 0.62, "water": 0.72, "reward": 0.52},
+    "stimulus": {"icon": "orange", "title": "Naranja fresca", "description": "Fruta jugosa con aroma cítrico y señal alimentaria intermedia.", "targetChannel": "food", "targetPosition": 0.80, "responseRule": "Verde si va decidida; amarillo si se aproxima con duda; rojo si no va."},
+    "colorMeaning": {"red": "Entorno perjudicial", "yellow": "Riesgos presentes", "green": "Entorno saludable"}
+  },
+  {
+    "id": "education",
+    "dimension": "Comida · fermentación",
+    "title": "Uva fermentada",
+    "question": "¿La mosca detecta y alcanza la uva fermentada?",
+    "description": "El olor de fermentación representa una fuente que la mosca de la fruta puede localizar a distancia.",
+    "quality": 0.84,
+    "signals": {"food": 0.88, "shelter": 0.48, "danger": 0.12, "social": 0.57, "novelty": 0.74, "water": 0.65, "reward": 0.82},
+    "stimulus": {"icon": "grape", "title": "Uva fermentada", "description": "Un racimo con levadura libera volátiles de fermentación atractivos.", "targetChannel": "food", "targetPosition": 0.80, "responseRule": "Verde si va decidida; amarillo si se aproxima con duda; rojo si no va."},
+    "colorMeaning": {"red": "Oportunidades ausentes", "yellow": "Oportunidades limitadas", "green": "Oportunidades disponibles"}
+  },
+  {
+    "id": "participation",
+    "dimension": "Comida · proteína",
+    "title": "Pasta de levadura",
+    "question": "¿La mosca detecta y alcanza la pasta de levadura?",
+    "description": "La levadura funciona como fuente de nutrientes y como olor alimentario reconocible para Drosophila.",
+    "quality": 0.70,
+    "signals": {"food": 0.72, "shelter": 0.50, "danger": 0.22, "social": 0.32, "novelty": 0.50, "water": 0.48, "reward": 0.70},
+    "stimulus": {"icon": "yeast", "title": "Pasta de levadura", "description": "Una pequeña porción de levadura ofrece señal proteica y energética.", "targetChannel": "food", "targetPosition": 0.80, "responseRule": "Verde si va decidida; amarillo si se aproxima con duda; rojo si no va."},
+    "colorMeaning": {"red": "Aislamiento", "yellow": "Apoyo irregular", "green": "Red activa"}
+  },
+  {
+    "id": "motivation",
+    "dimension": "Comida · deterioro",
+    "title": "Fruta sobremadura",
+    "question": "¿La mosca detecta y evita o alcanza la fruta sobremadura?",
+    "description": "La señal combina olor de fruta y fermentación con un nivel alto de deterioro; el modelo debe resolver esa ambivalencia.",
+    "quality": 0.30,
+    "signals": {"food": 0.20, "shelter": 0.38, "danger": 0.78, "social": 0.22, "novelty": 0.66, "water": 0.42, "reward": 0.25},
+    "stimulus": {"icon": "spoiled", "title": "Fruta sobremadura", "description": "Una fruta oscura con olor intenso: alimento posible, pero con señales de riesgo.", "targetChannel": "food", "targetPosition": 0.80, "responseRule": "Verde si va decidida; amarillo si se acerca con duda; rojo si no va."},
+    "colorMeaning": {"red": "Bloqueo persistente", "yellow": "Motivación fluctuante", "green": "Perspectiva favorable"}
+  }
+]
